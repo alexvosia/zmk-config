@@ -13,21 +13,21 @@
         tdc_x: tap_dance_x {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <100>;
+            tapping-term-ms = <200>;
             bindings = <&kp X>, <&kp LCTRL &kp X>;
         };
 
         tdc_c: tap_dance_c {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <100>;
+            tapping-term-ms = <200>;
             bindings = <&kp C>, <&kp LCTRL &kp C>;
         };
 
         tdc_v: tap_dance_v {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <100>;
+            tapping-term-ms = <200>;
             bindings = <&kp V>, <&kp LCTRL &kp V>;
         };
     };
