@@ -14,7 +14,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp X>, <&kp LCTRL &kp X>;
+            bindings = <&kp X>, <&kp Y>;
         };
 
         tdc_c: tap_dance_c {
@@ -37,10 +37,10 @@
 
         default_layer {
             bindings = <
-&mt LCTRL ESC  &kp Q  &kp W  &kp E    &kp R  &kp T               &kp Y             &kp U  &kp I      &kp O    &kp P     &kp BSPC
-&kp TAB        &kp A  &kp S  &kp D    &kp F  &kp G               &kp H             &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LALT       &kp Z  &tdc_x &tdc_c   &tdc_v &kp B               &kp N             &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RALT
-                             &kp LGUI &mo 1  &mt LSHIFT SPACE    &mt RSHIFT ENTER  &mo 2  &kp LCTRL
+&mt LCTRL ESC  &kp Q  &kp W   &kp E     &kp R   &kp T               &kp Y             &kp U  &kp I      &kp O    &kp P     &kp BSPC
+&kp TAB        &kp A  &kp S   &kp D     &kp F   &kp G               &kp H             &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LALT       &kp Z  &tdc_x  &tdc_c    &tdc_v  &kp B               &kp N             &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RALT
+                              &kp LGUI  &mo 1   &mt LSHIFT SPACE    &mt RSHIFT ENTER  &mo 2  &kp LCTRL
             >;
         };
 
