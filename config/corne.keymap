@@ -9,12 +9,26 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
+    macros {
+        zed_x: zed_x {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <40>;
+            tap-ms = <40>;
+            bindings
+                = <&macro_press   &kp LCTRL>
+                , <&macro_tap     &kp X>
+                , <&macro_release &kp LCTRL>
+                ;
+        };
+    };
+
     behaviors {
         tdc_x: tap_dance_x {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp X>, <&lctrl &kp X>;
+            bindings = <&kp X>, <&zed_x>;
         };
 
         tdc_c: tap_dance_c {
