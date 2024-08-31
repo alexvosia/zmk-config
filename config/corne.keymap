@@ -10,6 +10,66 @@
 
 / {
     macros {
+        zed_q: zed_q {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <40>;
+            tap-ms = <40>;
+            bindings
+                = <&macro_press   &kp LCTRL>
+                , <&macro_tap     &kp Q>
+                , <&macro_release &kp LCTRL>
+                ;
+        };
+        
+        zed_w: zed_w {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <40>;
+            tap-ms = <40>;
+            bindings
+                = <&macro_press   &kp LCTRL>
+                , <&macro_tap     &kp W>
+                , <&macro_release &kp LCTRL>
+                ;
+        };
+
+        zed_t: zed_t {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <40>;
+            tap-ms = <40>;
+            bindings
+                = <&macro_press   &kp LCTRL>
+                , <&macro_tap     &kp T>
+                , <&macro_release &kp LCTRL>
+                ;
+        };
+
+        zed_s: zed_s {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <40>;
+            tap-ms = <40>;
+            bindings
+                = <&macro_press   &kp LCTRL>
+                , <&macro_tap     &kp S>
+                , <&macro_release &kp LCTRL>
+                ;
+        };
+
+        zed_z: zed_z {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <40>;
+            tap-ms = <40>;
+            bindings
+                = <&macro_press   &kp LCTRL>
+                , <&macro_tap     &kp Z>
+                , <&macro_release &kp LCTRL>
+                ;
+        };
+
         zed_x: zed_x {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -21,9 +81,116 @@
                 , <&macro_release &kp LCTRL>
                 ;
         };
+
+        zed_c: zed_c {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <40>;
+            tap-ms = <40>;
+            bindings
+                = <&macro_press   &kp LCTRL>
+                , <&macro_tap     &kp C>
+                , <&macro_release &kp LCTRL>
+                ;
+        };
+
+        zed_v: zed_v {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <40>;
+            tap-ms = <40>;
+            bindings
+                = <&macro_press   &kp LCTRL>
+                , <&macro_tap     &kp V>
+                , <&macro_release &kp LCTRL>
+                ;
+        };
+
+        zed_b: zed_b {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <40>;
+            tap-ms = <40>;
+            bindings
+                = <&macro_press   &kp LCTRL>
+                , <&macro_tap     &kp B>
+                , <&macro_release &kp LCTRL>
+                ;
+        };
+
+        zed_y: zed_y {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <40>;
+            tap-ms = <40>;
+            bindings
+                = <&macro_press   &kp LCTRL>
+                , <&macro_tap     &kp Y>
+                , <&macro_release &kp LCTRL>
+                ;
+        };
+
+        zed_m: zed_m {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <40>;
+            tap-ms = <40>;
+            bindings
+                = <&macro_press   &kp LCTRL>
+                , <&macro_tap     &kp M>
+                , <&macro_release &kp LCTRL>
+                ;
+        };
+
+        zed_tm: zed_tm {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <40>;
+            tap-ms = <40>;
+            bindings
+                = <&macro_press   &kp LCTRL &kp LSHIFT>
+                , <&macro_tap     &kp GRAVE>
+                , <&macro_release &kp LCTRL &kp LSHIFT>
+                ;
+        };
     };
 
     behaviors {
+        tdc_q: tap_dance_q {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp Q>, <&zed_q>;
+        };
+
+        tdc_w: tap_dance_w {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp W>, <&zed_w>;
+        };
+
+        tdc_t: tap_dance_t {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp T>, <&zed_t>;
+        };
+
+        tdc_s: tap_dance_s {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp S>, <&zed_s>;
+        };
+
+        tdc_z: tap_dance_z {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp Q>, <&zed_z>;
+        };
+
         tdc_x: tap_dance_x {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
@@ -35,14 +202,42 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp C>, <&kp LCTRL &kp C>;
+            bindings = <&kp C>, <&zed_c>;
         };
 
         tdc_v: tap_dance_v {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp V>, <&kp LCTRL &kp V>;
+            bindings = <&kp V>, <&zed_v>;
+        };
+
+        tdc_b: tap_dance_b {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp B>, <&zed_b>;
+        };
+
+        tdc_y: tap_dance_y {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp Y>, <&zed_y>;
+        };
+
+        tdc_m: tap_dance_m {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp M>, <&zed_m>;
+        };
+
+        tdc_tm: tap_dance_tm {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp SQT>, <&zed_tm>;
         };
     };
 
@@ -51,16 +246,16 @@
 
         default_layer {
             bindings = <
-&mt LCTRL ESC  &kp Q  &kp W   &kp E     &kp R   &kp T               &kp Y             &kp U  &kp I      &kp O    &kp P     &kp BSPC
-&kp TAB        &kp A  &kp S   &kp D     &kp F   &kp G               &kp H             &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LALT       &kp Z  &tdc_x  &tdc_c    &tdc_v  &kp B               &kp N             &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RALT
+&mt LCTRL ESC  &tdc_q &tdc_w  &kp E     &kp R   &tdc_t              &tdc_y            &kp U  &kp I      &kp O    &kp P     &kp BSPC
+&kp TAB        &kp A  &tdc_s  &kp D     &kp F   &kp G               &kp H             &kp J  &kp K      &kp L    &kp SEMI  &tdc_tm
+&kp LALT       &tdc_z &tdc_x  &tdc_c    &tdc_v  &tdc_b              &kp N             &tdc_m &kp COMMA  &kp DOT  &kp FSLH  &kp RALT
                               &kp LGUI  &mo 1   &mt LSHIFT SPACE    &mt RSHIFT ENTER  &mo 2  &kp LCTRL
             >;
         };
 
         lower_layer {
             bindings = <
-&mt LCTRL ESC  &kp N1        &kp N2        &kp N3      &kp N4      &kp N5        &kp N6    &kp N7    &kp N8   &kp N9     &kp N0    &kp DEL
+&mt LCTRL ESC  &kp N1        &kp N2        &kp N3      &kp N4      &kp N5        &kp N6    &kp N7    &kp N8   &kp N9     &kp N0    &kp BSPC
 &kp TAB        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_NXT  &bt BT_PRV  &bt BT_CLR    &kp LEFT  &kp DOWN  &kp UP   &kp RIGHT  &kp HOME  &kp END
 &kp LALT       &kp F1        &kp F2        &kp F3      &kp F4      &kp F5        &kp F8    &kp F9    &kp F10  &kp F11    &kp F12   &kp RALT
                                            &trans      &trans      &trans        &trans    &trans    &trans
