@@ -9,33 +9,56 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
+    behaviors {
+        tdc_x: tap_dance_x {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <100>;
+            bindings = <&kp X>, <&ctrl &kp X>;
+        };
+
+        tdc_c: tap_dance_c {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <100>;
+            bindings = <&kp C>, <&ctrl &kp C>;
+        };
+
+        tdc_v: tap_dance_v {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <100>;
+            bindings = <&kp V>, <&ctrl &kp V>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
-&mt LCTRL ESC  &kp Q  &kp W  &kp E     &kp R  &kp T               &kp Y             &kp U  &kp I      &kp O    &kp P     &kp BSPC
-&kp TAB        &kp A  &kp S  &kp D     &kp F  &kp G               &kp H             &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LALT       &kp Z  &kp X  &kp C     &kp V  &kp B               &kp N             &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RALT
-                             &kp LGUI  &mo 1  &mt LSHIFT SPACE    &mt RSHIFT ENTER  &mo 2  &kp LCTRL
+&mt LCTRL ESC  &kp Q  &kp W  &kp E    &kp R  &kp T               &kp Y             &kp U  &kp I      &kp O    &kp P     &kp BSPC
+&kp TAB        &kp A  &kp S  &kp D    &kp F  &kp G               &kp H             &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LALT       &kp Z  &tdc_x &tdc_c   &tdc_v &kp B               &kp N             &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RALT
+                             &kp LGUI &mo 1  &mt LSHIFT SPACE    &mt RSHIFT ENTER  &mo 2  &kp LCTRL
             >;
         };
 
         lower_layer {
             bindings = <
-&trans  &kp N1        &kp N2        &kp N3      &kp N4      &kp N5        &kp N6    &kp N7    &kp N8   &kp N9     &kp N0    &kp DEL
-&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_NXT  &bt BT_PRV  &bt BT_CLR    &kp LEFT  &kp DOWN  &kp UP   &kp RIGHT  &kp HOME  &kp END
-&trans  &kp F1        &kp F2        &kp F3      &kp F4      &kp F5        &kp F8    &kp F9    &kp F10  &kp F11    &kp F12   &trans
-                                    &trans      &trans      &trans        &trans    &trans    &trans
+&mt LCTRL ESC  &kp N1        &kp N2        &kp N3      &kp N4      &kp N5        &kp N6    &kp N7    &kp N8   &kp N9     &kp N0    &kp DEL
+&kp TAB        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_NXT  &bt BT_PRV  &bt BT_CLR    &kp LEFT  &kp DOWN  &kp UP   &kp RIGHT  &kp HOME  &kp END
+&kp LALT       &kp F1        &kp F2        &kp F3      &kp F4      &kp F5        &kp F8    &kp F9    &kp F10  &kp F11    &kp F12   &kp RALT
+                                           &trans      &trans      &trans        &trans    &trans    &trans
             >;
         };
 
         raise_layer {
             bindings = <
-&trans  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp CARET  &kp DEL
-&trans  &trans    &trans  &trans    &trans    &kp CARET    &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT  &kp BSLH   &kp GRAVE
-&trans  &trans    &trans  &trans    &trans    &trans       &kp UNDER  &kp PLUS   &kp LBRC  &kp RBRC  &kp PIPE   &trans
-                          &trans    &trans    &trans       &trans     &trans     &trans
+&mt LCTRL ESC  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp CARET  &kp DEL
+&kp TAB        &trans    &trans  &trans    &trans    &kp CARET    &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT  &kp BSLH   &kp GRAVE
+&kp LALT       &trans    &trans  &trans    &trans    &trans       &kp UNDER  &kp PLUS   &kp LBRC  &kp RBRC  &kp PIPE   &kp RALT
+                                 &trans    &trans    &trans       &trans     &trans     &trans
             >;
         };
 
