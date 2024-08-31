@@ -14,21 +14,21 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <100>;
-            bindings = <&kp X>, <&ctrl &kp X>;
+            bindings = <&kp X>, <&kp LCTRL &kp X>;
         };
 
         tdc_c: tap_dance_c {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <100>;
-            bindings = <&kp C>, <&ctrl &kp C>;
+            bindings = <&kp C>, <&kp LCTRL &kp C>;
         };
 
         tdc_v: tap_dance_v {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <100>;
-            bindings = <&kp V>, <&ctrl &kp V>;
+            bindings = <&kp V>, <&kp LCTRL &kp V>;
         };
     };
 
