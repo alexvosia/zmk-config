@@ -14,11 +14,11 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <40>;
-            tap-ms = <40>;
+            tap-ms = <40>; 
             bindings
-                = <&macro_press   &kp LCTRL>
-                , <&macro_tap     &kp Q>
-                , <&macro_release &kp LCTRL>
+                = <&macro_press   &kp LALT>
+                , <&macro_tap     &kp F4>
+                , <&macro_release &kp LALT>
                 ;
         };
         
@@ -130,15 +130,75 @@
                 ;
         };
 
-        zed_m: zed_m {
+        zed_n: zed_n {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <40>;
             tap-ms = <40>;
             bindings
-                = <&macro_press   &kp LCTRL>
-                , <&macro_tap     &kp M>
-                , <&macro_release &kp LCTRL>
+                = <&macro_press   &kp LALT>
+                , <&macro_tap     &kp KP_1 &kp KP_N6 &kp KP_N4>
+                , <&macro_release &kp LALT>
+                ;
+        };
+
+        zed_a: zed_a {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <40>;
+            tap-ms = <40>;
+            bindings
+                = <&macro_press   &kp LALT>
+                , <&macro_tap     &kp KP_2 &kp KP_N2 &kp KP_N5>
+                , <&macro_release &kp LALT>
+                ;
+        };
+
+        zed_e: zed_e {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <40>;
+            tap-ms = <40>;
+            bindings
+                = <&macro_press   &kp LALT>
+                , <&macro_tap     &kp KP_2 &kp KP_N3 &kp KP_N3>
+                , <&macro_release &kp LALT>
+                ;
+        };
+
+        zed_i: zed_i {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <40>;
+            tap-ms = <40>;
+            bindings
+                = <&macro_press   &kp LALT>
+                , <&macro_tap     &kp KP_2 &kp KP_N3 &kp KP_N7>
+                , <&macro_release &kp LALT>
+                ;
+        };
+
+        zed_o: zed_o {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <40>;
+            tap-ms = <40>;
+            bindings
+                = <&macro_press   &kp LALT>
+                , <&macro_tap     &kp KP_2 &kp KP_N4 &kp KP_N3>
+                , <&macro_release &kp LALT>
+                ;
+        };
+
+        zed_u: zed_u {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <40>;
+            tap-ms = <40>;
+            bindings
+                = <&macro_press   &kp LALT>
+                , <&macro_tap     &kp KP_2 &kp KP_N4 &kp KP_N9>
+                , <&macro_release &kp LALT>
                 ;
         };
 
@@ -188,7 +248,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp Q>, <&zed_z>;
+            bindings = <&kp Z>, <&zed_z>;
         };
 
         tdc_x: tap_dance_x {
@@ -222,15 +282,50 @@
         tdc_y: tap_dance_y {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <200>;q
             bindings = <&kp Y>, <&zed_y>;
         };
 
-        tdc_m: tap_dance_m {
+        tdc_n: tap_dance_n {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp M>, <&zed_m>;
+            bindings = <&kp N>, <&zed_n>;
+        };
+
+        tdc_a: tap_dance_a {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp A>, <&zed_a>;
+        };
+
+        tdc_e: tap_dance_e {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp E>, <&zed_e>;
+        };
+
+        tdc_i: tap_dance_i {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp I>, <&zed_i>;
+        };
+
+        tdc_o: tap_dance_o {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp O>, <&zed_o>;
+        };
+
+        tdc_u: tap_dance_u {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp U>, <&zed_u>;
         };
 
         tdc_tm: tap_dance_tm {
@@ -239,6 +334,27 @@
             tapping-term-ms = <200>;
             bindings = <&kp SQT>, <&zed_tm>;
         };
+
+        tdc_sp: tap_dance_sp {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp LGUI>, <&kp RGUI>;
+        };
+
+        moto_l: mo_to_l {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&mo 1>, <&tog 1>;
+            mods = <(MOD_RSFT)>;
+        };
+
+        moto_r: mo_to_r {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&mo 2>, <&tog 2>;
+            mods = <(MOD_LSFT)>;
+        };
     };
 
     keymap {
@@ -246,37 +362,46 @@
 
         default_layer {
             bindings = <
-&mt LCTRL ESC  &tdc_q &tdc_w  &kp E     &kp R   &tdc_t              &tdc_y            &kp U  &kp I      &kp O    &kp P     &kp BSPC
-&kp TAB        &kp A  &tdc_s  &kp D     &kp F   &kp G               &kp H             &kp J  &kp K      &kp L    &kp SEMI  &tdc_tm
-&kp LALT       &tdc_z &tdc_x  &tdc_c    &tdc_v  &tdc_b              &kp N             &tdc_m &kp COMMA  &kp DOT  &kp FSLH  &kp RALT
-                              &kp LGUI  &mo 1   &mt LSHIFT SPACE    &mt RSHIFT ENTER  &mo 2  &kp LCTRL
+&mt LCTRL ESC  &tdc_q  &tdc_w  &tdc_e   &kp R    &tdc_t            /**/  &tdc_y            &tdc_u   &tdc_i     &tdc_o   &kp P     &kp BSPC
+&kp TAB        &tdc_a  &tdc_s  &kp D    &kp F    &kp G             /**/  &kp H             &kp J    &kp K      &kp L    &kp SEMI  &tdc_tm
+&kp LALT       &tdc_z  &tdc_x  &tdc_c   &tdc_v   &tdc_b            /**/  &tdc_n            &kp M    &kp COMMA  &kp DOT  &kp FSLH  &kp RALT
+                               &tdc_sp  &moto_l  &mt LSHIFT SPACE  /**/  &mt RSHIFT ENTER  &moto_r  &kp LCTRL
             >;
         };
 
         lower_layer {
             bindings = <
-&mt LCTRL ESC  &kp N1        &kp N2        &kp N3      &kp N4      &kp N5        &kp N6    &kp N7    &kp N8   &kp N9     &kp N0    &kp BSPC
-&kp TAB        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_NXT  &bt BT_PRV  &bt BT_CLR    &kp LEFT  &kp DOWN  &kp UP   &kp RIGHT  &kp HOME  &kp END
-&kp LALT       &kp F1        &kp F2        &kp F3      &kp F4      &kp F5        &kp F8    &kp F9    &kp F10  &kp F11    &kp F12   &kp RALT
-                                           &trans      &trans      &trans        &trans    &trans    &trans
+&mt LCTRL ESC  &kp N1        &kp N2        &kp N3      &kp N4      &kp N5            /**/   &kp N6            &kp N7    &kp N8   &kp N9     &kp N0    &kp BSPC
+&kp TAB        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_NXT  &bt BT_PRV  &bt BT_CLR        /**/   &kp LEFT          &kp DOWN  &kp UP   &kp RIGHT  &kp HOME  &kp END
+&kp LALT       &kp F1        &kp F2        &kp F3      &kp F4      &kp F5            /**/   &kp F8            &kp F9    &kp F10  &kp F11    &kp F12   &kp RALT
+                                           &kp LGUI    &trans      &mt LSHIFT SPACE  /**/   &mt RSHIFT ENTER  &trans    &kp LCTRL
             >;
         };
 
         raise_layer {
             bindings = <
-&mt LCTRL ESC  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp CARET  &kp DEL
-&kp TAB        &trans    &trans  &trans    &trans    &kp CARET    &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT  &kp BSLH   &kp GRAVE
-&kp LALT       &trans    &trans  &trans    &trans    &trans       &kp UNDER  &kp PLUS   &kp LBRC  &kp RBRC  &kp PIPE   &kp RALT
-                                 &trans    &trans    &trans       &trans     &trans     &trans
+&mt LCTRL ESC  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT         /**/  &kp AMPS          &kp ASTRK  &kp LPAR  &kp RPAR  &kp CARET  &kp DEL
+&kp TAB        &trans    &trans  &trans    &trans    &kp CARET         /**/  &kp MINUS         &kp EQUAL  &kp LBKT  &kp RBKT  &kp BSLH   &kp GRAVE
+&kp LALT       &trans    &trans  &trans    &trans    &trans            /**/  &kp UNDER         &kp PLUS   &kp LBRC  &kp RBRC  &kp PIPE   &kp RALT
+                                 &kp LGUI  &trans    &mt LSHIFT SPACE  /**/  &mt RSHIFT ENTER  &trans     &kp LCTRL
             >;
         };
 
         both_layer {
             bindings = <
-&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6    &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans   &trans   &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans   &trans   &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+&kp F1  &kp F2  &kp F3  &kp F4    &kp F5   &kp F6            /**/  &kp F7            &kp F8   &kp F9  &kp F10  &kp F11  &kp F12
+&trans  &trans  &trans  &trans    &trans   &trans            /**/  &trans            &trans   &trans  &trans   &trans   &trans
+&trans  &tog 4  &trans  &trans    &trans   &trans            /**/  &trans            &trans   &trans  &trans   &trans   &trans
+                        &kp LGUI  &trans   &mt LSHIFT SPACE  /**/  &mt RSHIFT ENTER  &trans   &kp LCTRL
+            >;
+        };
+
+        adjust_layer {
+            bindings = <
+&trans  &trans  &trans  &trans    &trans   &trans            /**/  &trans            &trans  &trans  &trans   &trans   &trans
+&trans  &trans  &trans  &trans    &trans   &trans            /**/  &trans            &trans  &trans  &trans   &trans   &trans
+&trans  &trans  &trans  &trans    &trans   &trans            /**/  &trans            &trans  &trans  &trans   &trans   &trans
+                        &kp LGUI  &trans   &mt LSHIFT SPACE  /**/  &mt RSHIFT ENTER  &trans  &kp LCTRL
             >;
         };
     };
