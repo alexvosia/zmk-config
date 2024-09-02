@@ -371,36 +371,36 @@
 
         lower_layer {
             bindings = <
-&mt LCTRL ESC  &kp N1        &kp N2        &kp N3      &kp N4      &kp N5            /**/   &kp N6            &kp N7    &kp N8   &kp N9     &kp N0    &kp BSPC
-&kp TAB        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_NXT  &bt BT_PRV  &bt BT_CLR        /**/   &kp LEFT          &kp DOWN  &kp UP   &kp RIGHT  &kp HOME  &kp END
-&kp LALT       &kp F1        &kp F2        &kp F3      &kp F4      &kp F5            /**/   &kp F8            &kp F9    &kp F10  &kp F11    &kp F12   &kp RALT
-                                           &kp LGUI    &trans      &mt LSHIFT SPACE  /**/   &mt RSHIFT ENTER  &trans    &kp LCTRL
+&mt LCTRL ESC  &kp N1        &kp N2        &kp N3      &kp N4      &kp N5            /**/   &kp N6            &kp N7     &kp N8     &kp N9           &kp N0     &kp BSPC
+&kp TAB        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_NXT  &bt BT_PRV  &out OUT_BLE      /**/   &kp LEFT          &kp DOWN   &kp UP     &kp RIGHT        &kp HOME   &kp END
+&kp LALT       &none         &none         &none       &none       &bt BT_CLR        /**/   &kp INS           &kp PSCRN  &kp PSCRN  &kp PAUSE_BREAK  &kp PG_UP  &kp PG_DN
+                                           &kp LGUI    &trans      &mt LSHIFT SPACE  /**/   &mt RSHIFT ENTER  &trans     &kp LCTRL
             >;
         };
 
         raise_layer {
             bindings = <
-&mt LCTRL ESC  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT         /**/  &kp AMPS          &kp ASTRK  &kp LPAR  &kp RPAR  &kp CARET  &kp DEL
-&kp TAB        &trans    &trans  &trans    &trans    &kp CARET         /**/  &kp MINUS         &kp EQUAL  &kp LBKT  &kp RBKT  &kp BSLH   &kp GRAVE
-&kp LALT       &trans    &trans  &trans    &trans    &trans            /**/  &kp UNDER         &kp PLUS   &kp LBRC  &kp RBRC  &kp PIPE   &kp RALT
+&mt LCTRL ESC  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT         /**/  &kp CARET         &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR   &kp DEL
+&kp TAB        &none     &none   &none     &none     &none             /**/  &kp MINUS         &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH   &kp GRAVE
+&kp LALT       &none     &none   &none     &none     &none             /**/  &kp UNDER         &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE   &kp TILDE
                                  &kp LGUI  &trans    &mt LSHIFT SPACE  /**/  &mt RSHIFT ENTER  &trans     &kp LCTRL
             >;
         };
 
         both_layer {
             bindings = <
-&kp F1  &kp F2  &kp F3  &kp F4    &kp F5   &kp F6            /**/  &kp F7            &kp F8   &kp F9  &kp F10  &kp F11  &kp F12
-&trans  &trans  &trans  &trans    &trans   &trans            /**/  &trans            &trans   &trans  &trans   &trans   &trans
-&trans  &tog 4  &trans  &trans    &trans   &trans            /**/  &trans            &trans   &trans  &trans   &trans   &trans
-                        &kp LGUI  &trans   &mt LSHIFT SPACE  /**/  &mt RSHIFT ENTER  &trans   &kp LCTRL
+&kp F1      &kp F2        &kp F3        &kp F4        &kp F5        &kp F6            /**/  &kp F7            &kp F8  &kp F9     &kp F10  &kp F11  &kp F12
+&kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_BRI_DN  &kp C_BRI_UP  &none             /**/  &none             &none   &none      &none    &none    &none
+&none       &tog 4        &none         &none         &none         &none             /**/  &none             &none   &none      &none    &none    &none 
+                                        &kp LGUI      &trans        &mt LSHIFT SPACE  /**/  &mt RSHIFT ENTER  &trans  &kp LCTRL
             >;
         };
 
         adjust_layer {
             bindings = <
-&trans  &trans  &trans  &trans    &trans   &trans            /**/  &trans            &trans  &trans  &trans   &trans   &trans
-&trans  &trans  &trans  &trans    &trans   &trans            /**/  &trans            &trans  &trans  &trans   &trans   &trans
-&trans  &trans  &trans  &trans    &trans   &trans            /**/  &trans            &trans  &trans  &trans   &trans   &trans
+&none   &none   &none   &none     &none    &none             /**/  &none             &none   &none   &none    &none    &none 
+&none   &none   &none   &none     &none    &none             /**/  &none             &none   &none   &none    &none    &none 
+&none   &none   &none   &none     &none    &none             /**/  &none             &none   &none   &none    &none    &none 
                         &kp LGUI  &trans   &mt LSHIFT SPACE  /**/  &mt RSHIFT ENTER  &trans  &kp LCTRL
             >;
         };
