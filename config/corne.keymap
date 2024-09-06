@@ -363,10 +363,10 @@
 
         default_layer {
             bindings = <
-&mt LCTRL ESC  &tdc_q  &tdc_w  &tdc_e   &kp R    &tdc_t            /**/  &tdc_y            &tdc_u   &tdc_i     &tdc_o   &kp P     &kp BSPC
-&kp TAB        &tdc_a  &tdc_s  &kp D    &kp F    &kp G             /**/  &kp H             &kp J    &kp K      &kp L    &kp SEMI  &tdc_tm
-&kp LALT       &tdc_z  &tdc_x  &tdc_c   &tdc_v   &tdc_b            /**/  &tdc_n            &kp M    &kp COMMA  &kp DOT  &kp FSLH  &kp RALT
-                               &tdc_sp  &moto_l  &mt LSHIFT SPACE  /**/  &mt RSHIFT ENTER  &moto_r  &kp LCTRL
+&mt LCTRL ESC  &kp Q  &kp W  &kp E    &kp R    &kp T             /**/  &kp Y             &kp U    &kp I      &kp O    &kp P     &kp BSPC
+&kp TAB        &kp A  &kp S  &kp D    &kp F    &kp G             /**/  &kp H             &kp J    &kp K      &kp L    &kp SEMI  &tdc_tm
+&kp LALT       &kp Z  &kp X  &kp C    &kp V    &kp B             /**/  &kp N             &kp M    &kp COMMA  &kp DOT  &kp FSLH  &kp RALT
+                             &tdc_sp  &moto_l  &mt LSHIFT SPACE  /**/  &mt RSHIFT ENTER  &moto_r  &kp LCTRL
             >;
         };
 
@@ -402,7 +402,16 @@
 &kp ESC   &none   &none   &none     &none   &none             /**/  &none             &kp N7  &kp N8  &kp N9  &kp KP_DIVIDE    &kp BSPC 
 &kp TAB   &none   &none   &none     &none   &none             /**/  &none             &kp N4  &kp N5  &kp N6  &kp KP_MULTIPLY  &kp KP_MINUS 
 &kp LALT  &none   &none   &none     &none   &none             /**/  &kp N0            &kp N1  &kp N2  &kp N3  &kp KP_DOT       &kp KP_PLUS
-                          &kp LGUI  &tog 4  &mt LSHIFT SPACE  /**/  &mt RSHIFT ENTER  &trans  &kp LCTRL
+                          &kp LGUI  &tog 4  &mt LSHIFT SPACE  /**/  &mt RSHIFT ENTER  &tog 5  &kp LCTRL
+            >;
+        };
+
+        dual_layer {
+            bindings = <
+&mt LCTRL ESC  &tdc_q  &tdc_w  &tdc_e   &kp R    &tdc_t       /**/  &tdc_y            &tdc_u   &tdc_i     &tdc_o   &kp P     &kp BSPC
+&kp TAB        &tdc_a  &tdc_s  &kp D    &kp F    &kp G        /**/  &kp H             &kp J    &kp K      &kp L    &kp SEMI  &tdc_tm
+&kp LALT       &tdc_z  &tdc_x  &tdc_c   &tdc_v   &tdc_b       /**/  &tdc_n            &kp M    &kp COMMA  &kp DOT  &kp FSLH  &kp RALT
+                          &kp LGUI  &tog 5  &mt LSHIFT SPACE  /**/  &mt RSHIFT ENTER  &trans  &kp LCTRL
             >;
         };
     };
