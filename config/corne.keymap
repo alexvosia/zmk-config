@@ -399,7 +399,7 @@
 
         calc_layer {
             bindings = <
-&kp ESC   &none   &none   &none     &none   &none             /**/  &none             &kp N7  &kp N8  &kp N9  &kp KP_DIVIDE    &kp BSPC 
+&kp ESC   &kp N4  &none   &none     &none   &none             /**/  &none             &kp N7  &kp N8  &kp N9  &kp KP_DIVIDE    &kp BSPC 
 &kp TAB   &none   &none   &none     &none   &none             /**/  &none             &kp N4  &kp N5  &kp N6  &kp KP_MULTIPLY  &kp KP_MINUS 
 &kp LALT  &none   &none   &none     &none   &none             /**/  &kp N0            &kp N1  &kp N2  &kp N3  &kp KP_DOT       &kp KP_PLUS
                           &kp LGUI  &tog 4  &mt LSHIFT SPACE  /**/  &mt RSHIFT ENTER  &trans  &kp LCTRL
@@ -417,40 +417,40 @@
 
         fv_layer {
             bindings = <
-&mt LCTRL ESC  &kp N1        &kp N2        &kp N3        &kp N4        &kp N5            /**/  &kp N6            &kp N7    &kp N8     &kp N9           &kp N0     &kp BSPC
-&kp TAB        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4      /**/  &kp LEFT          &kp DOWN  &kp UP     &kp RIGHT        &kp HOME   &kp END
-&kp LALT       &bt BT_SEL 5  &bt BT_SEL 6  &out OUT_BLE  &out OUT_TOG  &bt BT_CLR        /**/  &kp SLCK          &kp INS   &kp PSCRN  &kp PAUSE_BREAK  &kp PG_UP  &kp PG_DN
-                                           &kp LGUI      &tog 6        &mt LSHIFT SPACE  /**/  &mt RSHIFT ENTER  &trans    &kp LCTRL
+&kp ESC   &kp N6  &none   &none     &none   &none             /**/  &none             &kp N7  &kp N8  &kp N9  &kp KP_DIVIDE    &kp BSPC 
+&kp TAB   &none   &none   &none     &none   &none             /**/  &none             &kp N4  &kp N5  &kp N6  &kp KP_MULTIPLY  &kp KP_MINUS 
+&kp LALT  &none   &none   &none     &none   &none             /**/  &kp N0            &kp N1  &kp N2  &kp N3  &kp KP_DOT       &kp KP_PLUS
+                          &kp LGUI  &tog 4  &mt LSHIFT SPACE  /**/  &mt RSHIFT ENTER  &trans  &kp LCTRL
             >;
         };
 
         sx_layer {
             bindings = <
-&mt LCTRL ESC  &kp N1        &kp N2        &kp N3        &kp N4        &kp N5            /**/  &kp N6            &kp N7    &kp N8     &kp N9           &kp N0     &kp BSPC
-&kp TAB        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4      /**/  &kp LEFT          &kp DOWN  &kp UP     &kp RIGHT        &kp HOME   &kp END
-&kp LALT       &bt BT_SEL 5  &bt BT_SEL 6  &out OUT_BLE  &out OUT_TOG  &bt BT_CLR        /**/  &kp SLCK          &kp INS   &kp PSCRN  &kp PAUSE_BREAK  &kp PG_UP  &kp PG_DN
-                                           &kp LGUI      &tog 7        &mt LSHIFT SPACE  /**/  &mt RSHIFT ENTER  &trans    &kp LCTRL
+&kp ESC   &kp N7  &none   &none     &none   &none             /**/  &none             &kp N7  &kp N8  &kp N9  &kp KP_DIVIDE    &kp BSPC 
+&kp TAB   &none   &none   &none     &none   &none             /**/  &none             &kp N4  &kp N5  &kp N6  &kp KP_MULTIPLY  &kp KP_MINUS 
+&kp LALT  &none   &none   &none     &none   &none             /**/  &kp N0            &kp N1  &kp N2  &kp N3  &kp KP_DOT       &kp KP_PLUS
+                          &kp LGUI  &tog 4  &mt LSHIFT SPACE  /**/  &mt RSHIFT ENTER  &trans  &kp LCTRL
             >;
         };
 
         sv_layer {
             bindings = <
-&mt LCTRL ESC  &kp N1        &kp N2        &kp N3        &kp N4        &kp N5            /**/  &kp N6            &kp N7    &kp N8     &kp N9           &kp N0     &kp BSPC
-&kp TAB        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4      /**/  &kp LEFT          &kp DOWN  &kp UP     &kp RIGHT        &kp HOME   &kp END
-&kp LALT       &bt BT_SEL 5  &bt BT_SEL 6  &out OUT_BLE  &out OUT_TOG  &bt BT_CLR        /**/  &kp SLCK          &kp INS   &kp PSCRN  &kp PAUSE_BREAK  &kp PG_UP  &kp PG_DN
-                                           &kp LGUI      &tog 8        &mt LSHIFT SPACE  /**/  &mt RSHIFT ENTER  &trans    &kp LCTRL
+&kp ESC   &kp N8  &none   &none     &none   &none             /**/  &none             &kp N7  &kp N8  &kp N9  &kp KP_DIVIDE    &kp BSPC 
+&kp TAB   &none   &none   &none     &none   &none             /**/  &none             &kp N4  &kp N5  &kp N6  &kp KP_MULTIPLY  &kp KP_MINUS 
+&kp LALT  &none   &none   &none     &none   &none             /**/  &kp N0            &kp N1  &kp N2  &kp N3  &kp KP_DOT       &kp KP_PLUS
+                          &kp LGUI  &tog 4  &mt LSHIFT SPACE  /**/  &mt RSHIFT ENTER  &trans  &kp LCTRL
             >;
         };
 
         ei_layer {
             bindings = <
-&mt LCTRL ESC  &kp N1        &kp N2        &kp N3        &kp N4        &kp N5            /**/  &kp N6            &kp N7    &kp N8     &kp N9           &kp N0     &kp BSPC
-&kp TAB        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4      /**/  &kp LEFT          &kp DOWN  &kp UP     &kp RIGHT        &kp HOME   &kp END
-&kp LALT       &bt BT_SEL 5  &bt BT_SEL 6  &out OUT_BLE  &out OUT_TOG  &bt BT_CLR        /**/  &kp SLCK          &kp INS   &kp PSCRN  &kp PAUSE_BREAK  &kp PG_UP  &kp PG_DN
-                                           &kp LGUI      &tog 9        &mt LSHIFT SPACE  /**/  &mt RSHIFT ENTER  &trans    &kp LCTRL
+&kp ESC   &kp N9  &none   &none     &none   &none             /**/  &none             &kp N7  &kp N8  &kp N9  &kp KP_DIVIDE    &kp BSPC 
+&kp TAB   &none   &none   &none     &none   &none             /**/  &none             &kp N4  &kp N5  &kp N6  &kp KP_MULTIPLY  &kp KP_MINUS 
+&kp LALT  &none   &none   &none     &none   &none             /**/  &kp N0            &kp N1  &kp N2  &kp N3  &kp KP_DOT       &kp KP_PLUS
+                          &kp LGUI  &tog 4  &mt LSHIFT SPACE  /**/  &mt RSHIFT ENTER  &trans  &kp LCTRL
             >;
         };
-        
+
     };
 
     conditional_layers {
