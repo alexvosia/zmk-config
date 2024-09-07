@@ -392,7 +392,7 @@
             bindings = <
 &kp F1  &kp F2  &kp F3  &kp F4    &kp F5  &kp F6            /**/  &kp F7            &kp F8  &kp F9     &kp F10  &kp F11  &kp F12
 &none   &none   &none   &none     &none   &none             /**/  &none             &none   &none      &none    &none    &none
-&none   &none   &none   &none     &none   &none             /**/  &none             &none   &none      &none    &none    &tog 4
+&none   &none   &none   &none     &none   &none             /**/  &tog 9            &tog 8  &tog 7     &tog 6   &tog 5   &tog 4
                         &kp LGUI  &trans  &mt LSHIFT SPACE  /**/  &mt RSHIFT ENTER  &trans  &kp LCTRL
             >;
         };
@@ -402,11 +402,11 @@
 &kp ESC   &none   &none   &none     &none   &none             /**/  &none             &kp N7  &kp N8  &kp N9  &kp KP_DIVIDE    &kp BSPC 
 &kp TAB   &none   &none   &none     &none   &none             /**/  &none             &kp N4  &kp N5  &kp N6  &kp KP_MULTIPLY  &kp KP_MINUS 
 &kp LALT  &none   &none   &none     &none   &none             /**/  &kp N0            &kp N1  &kp N2  &kp N3  &kp KP_DOT       &kp KP_PLUS
-                          &kp LGUI  &tog 4  &mt LSHIFT SPACE  /**/  &mt RSHIFT ENTER  &tog 5  &kp LCTRL
+                          &kp LGUI  &tog 4  &mt LSHIFT SPACE  /**/  &mt RSHIFT ENTER  &trans  &kp LCTRL
             >;
         };
 
-        dual_layer {
+        write_layer {
             bindings = <
 &mt LCTRL ESC  &tdc_q  &tdc_w  &tdc_e   &kp R    &tdc_t       /**/  &tdc_y            &tdc_u   &tdc_i     &tdc_o   &kp P     &kp BSPC
 &kp TAB        &tdc_a  &tdc_s  &kp D    &kp F    &kp G        /**/  &kp H             &kp J    &kp K      &kp L    &kp SEMI  &tdc_tm
@@ -414,6 +414,43 @@
                           &kp LGUI  &tog 5  &mt LSHIFT SPACE  /**/  &mt RSHIFT ENTER  &trans  &kp LCTRL
             >;
         };
+
+        fv_layer {
+            bindings = <
+&mt LCTRL ESC  &kp N1        &kp N2        &kp N3        &kp N4        &kp N5            /**/  &kp N6            &kp N7    &kp N8     &kp N9           &kp N0     &kp BSPC
+&kp TAB        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4      /**/  &kp LEFT          &kp DOWN  &kp UP     &kp RIGHT        &kp HOME   &kp END
+&kp LALT       &bt BT_SEL 5  &bt BT_SEL 6  &out OUT_BLE  &out OUT_TOG  &bt BT_CLR        /**/  &kp SLCK          &kp INS   &kp PSCRN  &kp PAUSE_BREAK  &kp PG_UP  &kp PG_DN
+                                           &kp LGUI      &tog 6        &mt LSHIFT SPACE  /**/  &mt RSHIFT ENTER  &trans    &kp LCTRL
+            >;
+        };
+
+        sx_layer {
+            bindings = <
+&mt LCTRL ESC  &kp N1        &kp N2        &kp N3        &kp N4        &kp N5            /**/  &kp N6            &kp N7    &kp N8     &kp N9           &kp N0     &kp BSPC
+&kp TAB        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4      /**/  &kp LEFT          &kp DOWN  &kp UP     &kp RIGHT        &kp HOME   &kp END
+&kp LALT       &bt BT_SEL 5  &bt BT_SEL 6  &out OUT_BLE  &out OUT_TOG  &bt BT_CLR        /**/  &kp SLCK          &kp INS   &kp PSCRN  &kp PAUSE_BREAK  &kp PG_UP  &kp PG_DN
+                                           &kp LGUI      &tog 7        &mt LSHIFT SPACE  /**/  &mt RSHIFT ENTER  &trans    &kp LCTRL
+            >;
+        };
+
+        sv_layer {
+            bindings = <
+&mt LCTRL ESC  &kp N1        &kp N2        &kp N3        &kp N4        &kp N5            /**/  &kp N6            &kp N7    &kp N8     &kp N9           &kp N0     &kp BSPC
+&kp TAB        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4      /**/  &kp LEFT          &kp DOWN  &kp UP     &kp RIGHT        &kp HOME   &kp END
+&kp LALT       &bt BT_SEL 5  &bt BT_SEL 6  &out OUT_BLE  &out OUT_TOG  &bt BT_CLR        /**/  &kp SLCK          &kp INS   &kp PSCRN  &kp PAUSE_BREAK  &kp PG_UP  &kp PG_DN
+                                           &kp LGUI      &tog 8        &mt LSHIFT SPACE  /**/  &mt RSHIFT ENTER  &trans    &kp LCTRL
+            >;
+        };
+
+        ei_layer {
+            bindings = <
+&mt LCTRL ESC  &kp N1        &kp N2        &kp N3        &kp N4        &kp N5            /**/  &kp N6            &kp N7    &kp N8     &kp N9           &kp N0     &kp BSPC
+&kp TAB        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4      /**/  &kp LEFT          &kp DOWN  &kp UP     &kp RIGHT        &kp HOME   &kp END
+&kp LALT       &bt BT_SEL 5  &bt BT_SEL 6  &out OUT_BLE  &out OUT_TOG  &bt BT_CLR        /**/  &kp SLCK          &kp INS   &kp PSCRN  &kp PAUSE_BREAK  &kp PG_UP  &kp PG_DN
+                                           &kp LGUI      &tog 9        &mt LSHIFT SPACE  /**/  &mt RSHIFT ENTER  &trans    &kp LCTRL
+            >;
+        };
+        
     };
 
     conditional_layers {
