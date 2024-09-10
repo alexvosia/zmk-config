@@ -361,7 +361,8 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer: default {
+        default_layer {
+            name = "default";
             bindings = <
 &mt LCTRL ESC  &kp Q  &kp W  &kp E    &kp R    &kp T             /**/  &kp Y             &kp U    &kp I      &kp O    &kp P     &kp BSPC
 &kp TAB        &kp A  &kp S  &kp D    &kp F    &kp G             /**/  &kp H             &kp J    &kp K      &kp L    &kp SEMI  &tdc_tm
@@ -370,7 +371,7 @@
             >;
         };
 
-        lower_layer: lower {
+        lower_layer {
             bindings = <
 &mt LCTRL ESC  &kp N1        &kp N2        &kp N3        &kp N4        &kp N5            /**/  &kp N6            &kp N7    &kp N8     &kp N9           &kp N0     &kp BSPC
 &kp TAB        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4      /**/  &kp LEFT          &kp DOWN  &kp UP     &kp RIGHT        &kp HOME   &kp END
@@ -379,7 +380,7 @@
             >;
         };
 
-        raise_layer: raise {
+        raise_layer {
             bindings = <
 &mt LCTRL ESC  &kp EXCL  &kp AT      &kp HASH      &kp DLLR      &kp PRCNT         /**/  &kp CARET         &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp DEL
 &kp TAB        &kp CLCK  &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &none             /**/  &kp MINUS         &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
@@ -388,7 +389,7 @@
             >;
         };
 
-        both_layer: both {
+        both_layer {
             bindings = <
 &kp F1  &kp F2  &kp F3  &kp F4    &kp F5  &kp F6            /**/  &kp F7            &kp F8  &kp F9     &kp F10  &kp F11  &kp F12
 &none   &none   &none   &none     &none   &none             /**/  &none             &none   &none      &none    &none    &none
@@ -397,7 +398,7 @@
             >;
         };
 
-        calc_layer: calc {
+        calc_layer {
             bindings = <
 &kp ESC   &kp N4  &none   &none     &none   &none             /**/  &none             &kp N7  &kp N8  &kp N9  &kp KP_DIVIDE    &kp BSPC 
 &kp TAB   &none   &none   &none     &none   &none             /**/  &none             &kp N4  &kp N5  &kp N6  &kp KP_MULTIPLY  &kp KP_MINUS 
@@ -406,7 +407,7 @@
             >;
         };
 
-        write_layer: write {
+        write_layer {
             bindings = <
 &mt LCTRL ESC  &tdc_q  &tdc_w  &tdc_e    &kp R   &tdc_t            /**/  &tdc_y            &tdc_u   &tdc_i     &tdc_o   &kp P     &kp BSPC
 &kp TAB        &tdc_a  &tdc_s  &kp D     &kp F   &kp G             /**/  &kp H             &kp J    &kp K      &kp L    &kp SEMI  &tdc_tm
@@ -415,7 +416,7 @@
             >;
         };
 
-        five_layer: five {
+        five_layer {
             bindings = <
 &kp ESC   &kp N6  &none   &none     &none  &none             /**/  &none             &kp N7  &kp N8  &kp N9  &kp KP_DIVIDE    &kp BSPC 
 &kp TAB   &none   &none   &none     &none  &none             /**/  &none             &kp N4  &kp N5  &kp N6  &kp KP_MULTIPLY  &kp KP_MINUS 
@@ -433,7 +434,7 @@
             >;
         };
 
-        seven_layer: seven {
+        seven_layer{
             bindings = <
 &kp ESC   &kp N8  &none   &none     &none   &none             /**/  &none             &kp N7  &kp N8  &kp N9  &kp KP_DIVIDE    &kp BSPC 
 &kp TAB   &none   &none   &none     &none   &none             /**/  &none             &kp N4  &kp N5  &kp N6  &kp KP_MULTIPLY  &kp KP_MINUS 
@@ -442,7 +443,7 @@
             >;
         };
 
-        eight_layer: eight {
+        eight_layer {
             bindings = <
 &kp ESC   &kp N9  &none   &none     &none   &none             /**/  &none             &kp N7  &kp N8  &kp N9  &kp KP_DIVIDE    &kp BSPC 
 &kp TAB   &none   &none   &none     &none   &none             /**/  &none             &kp N4  &kp N5  &kp N6  &kp KP_MULTIPLY  &kp KP_MINUS 
